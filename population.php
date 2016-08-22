@@ -34,7 +34,7 @@
 
 
    var width = 1500;
-   var height = 9000;
+   var height = 6000;
 
    var widthScale = d3.scale.linear()
 		    .domain([0,100])
@@ -85,6 +85,11 @@
 				canvas.append("g")
 				.attr("transform","translate(0,300)") 
    				.call(axis)
+ 		                .append("text")
+  			        .attr("transform","translate(700,50)") 
+			        .style("text-anchor", "middle")
+			        .text("Years");
+
    })
    </script>
 <p>Following page shows a bar graph of population of a country vs its life expectancy</p>
