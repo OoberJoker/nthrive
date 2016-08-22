@@ -65,6 +65,13 @@
 					.attr("y",function (d,i){return i*50;})
 					.attr("fill",function(d){ return color(d.lifeExp); })
 				        .attr("id","bar")
+					 .on("click",function(){
+                                                var active = textID.active ? false: true;
+                                                newOpacity = active ? 0 : 1;
+                                                d3.selectAll("#textID").style("opacity",newOpacity);
+                                                textID.active = active;
+                                          })		
+						
 
 				       canvas.selectAll("text")
 				      .data(data)
@@ -75,12 +82,6 @@
 					 .attr("id","textID")
 					 .attr("y",function (d,i){return i*50+24;})
 					 .text(function(d){return "Country:"+d.country +",Total Population: "+ d.population;})
-					.on("click",function(){
-						var active = textID.active ? false: true;
-						newOpacity = active ? 0 : 1;
-						d3.selectAll("#textID").style("opacity",newOpacity);
-						textID.active = active;
-					  }) 
 				canvas.append("g")
 				.attr("transform","translate(0,300)") 
    				.call(axis)
