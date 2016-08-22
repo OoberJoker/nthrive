@@ -86,7 +86,7 @@
    				.call(axis)
    })
    </script>
-<p>Following page shows a bar grap of population of a couuntry vs its life expectancy</p>
+<p>Following page shows a bar graph of population of a couuntry vs its life expectancy</p>
 <p>Select up to 5 countries</p>
 <form action="http://ec2-54-213-52-202.us-west-2.compute.amazonaws.com/nthrive/requestProcessor.php" method="post">
 		<span class="countryHeader">Africa</span>
